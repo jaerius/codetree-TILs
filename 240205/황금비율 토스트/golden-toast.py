@@ -111,6 +111,7 @@ for j in range(m):
             continue
         else:
             it == l.erase(it)
+            
     elif inp.startswith("P"):
         pit = inp.split()
         l.insert(it, pit[1])
