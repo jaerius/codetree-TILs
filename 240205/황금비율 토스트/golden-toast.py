@@ -73,21 +73,47 @@ arr = list(map(int, input().split()))
 n = arr[0]
 m = arr[1]
 
-alphabet =list(map(input().split))
+alphabet = input()
+char = list(alphabet)
 
 l = DoublyLinkedList()
 
+for i in range(len(char)):
+    l.push_back(char[i])
 
 
-it= l.begin()
+#it = l.begin()
+#while it != l.end():
+#    print(it.data, end="")
+#    it = it.next
 
-print(it.data)
-it = it.next
-print(it.data)
-it = it.prev
-print(it.data)
+#print(end = " ")
 
-it = l.erase
+it = l.end()
+
+for j in range(n):
+    inp = input()
+    
+    if inp.startswith("L"):
+        if it == l.begin():
+            continue
+        else:
+            it = it.prev
+    elif inp.startswith("R"):
+        if it == l.end():
+            continue
+        else:
+            it = it.next
+    elif inp.startswith("D"):
+        if it == l.end():
+            continue
+        else:
+            it = l.erase(it)
+    elif inp.startswith("P"):
+        pit = inp.split()
+        l.insert(it, pit[1])
+        #it = it.next
+
 it = l.begin()
 while it != l.end():
     print(it.data, end="")
