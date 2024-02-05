@@ -91,7 +91,7 @@ for i in range(len(char)):
 
 it = l.end()
 
-for j in range(n):
+for j in range(m):
     inp = input()
     
     if inp.startswith("L"):
@@ -99,16 +99,18 @@ for j in range(n):
             continue
         else:
             it = it.prev
+            
     elif inp.startswith("R"):
         if it == l.end():
             continue
         else:
             it = it.next
     elif inp.startswith("D"):
+        
         if it == l.end():
             continue
         else:
-            it = l.erase(it)
+            it == l.erase(it)
     elif inp.startswith("P"):
         pit = inp.split()
         l.insert(it, pit[1])
