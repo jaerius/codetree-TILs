@@ -110,8 +110,8 @@ for j in range(m):
         if it == l.end():
             continue
         else:
-            it == l.erase(it)
-            
+            it = l.erase(it)
+
     elif inp.startswith("P"):
         pit = inp.split()
         l.insert(it, pit[1])
